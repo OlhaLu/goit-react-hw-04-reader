@@ -48,7 +48,6 @@ export default class Reader extends Component {
     });
       this.setState(prevState => ({ renderedPage: prevState.renderedPage + 1 }));
   }
-
         render() {
           const { renderedPage } = this.state;
 

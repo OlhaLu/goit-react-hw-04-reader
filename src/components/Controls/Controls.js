@@ -16,13 +16,12 @@ import T from 'prop-types';
           disabled={currentPage === lengthPublications}
           onClick={nextList}>Вперед</button>
         </section>
-    ) 
+      ) 
     }
 
     Controls.propTypes = {
       prevList: T.func.isRequired,
       nextList: T.func.isRequired,
     };
-
 
 export default Controls;

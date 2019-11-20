@@ -8,7 +8,7 @@ const Publications = ({ items }) => {
       <h2 сlassName={style.title}>{items.title}</h2>
       <p сlassName={style.text}>{items.text}</p>
       </article>
-    );
+  );
 }
 
   Publications.propTypes = {

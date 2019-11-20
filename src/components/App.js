@@ -7,7 +7,7 @@ function App() {
       <>
        <BrowserRouter>
           <Switch>
-            <Route path="/reader" exact component={Reader} />
+            <Route path="/reader?item=1" exact component={Reader} />
             <Redirect from='/' to='/reader'/>
             <Redirect to={{
               pathname: "/reader",
