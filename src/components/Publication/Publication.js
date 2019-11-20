@@ -2,21 +2,21 @@ import React from 'react';
 import T from 'prop-types';
 import style from '../../styles.css';
 
-const Publications = ({ items }) => {
-    return (
-      <article сlassName={style.publication} id={items.id}>
-      <h2 сlassName={style.title}>{items.title}</h2>
-      <p сlassName={style.text}>{items.text}</p>
-      </article>
+const Publication = ({ item }) => {
+  return (
+    <article сlassName={style.publication} id={item.id}>
+      <h2 сlassName={style.title}>{item.title}</h2>
+      <p сlassName={style.text}>{item.text}</p>
+    </article>
   );
-}
+};
 
-  Publications.propTypes = {
+Publication.propTypes = {
   items: T.shape({
     id: T.string.isRequired,
     title: T.string.isRequired,
     text: T.string.isRequired,
-  })
+  }),
 };
-  
-export default Publications;
+
+export default Publication;
