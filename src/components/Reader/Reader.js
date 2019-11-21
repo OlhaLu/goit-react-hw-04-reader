@@ -3,7 +3,6 @@ import Controls from '../Controls/Controls';
 import Counter from '../Counter/Counter';
 import Publication from '../Publication/Publication';
 import publications from '../../publications.json';
-import style from '../../styles.css';
 const queryString = require('query-string');
 
 export default class Reader extends Component {
@@ -52,7 +51,7 @@ export default class Reader extends Component {
   render() {
     const { renderedPage } = this.state;
     return (
-      <div сlassName={style.render}>
+      <div>
         <Controls
           currentPage={renderedPage}
           lengthPublications={publications.length}
