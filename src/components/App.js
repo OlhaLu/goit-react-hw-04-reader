@@ -8,7 +8,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/reader" exact component={Reader} />
-          <Redirect from="/" to="/reader" />
+          <Redirect to="/reader" />
         </Switch>
       </BrowserRouter>
     </>
