@@ -8,9 +8,8 @@ const queryString = require('query-string');
 export default class Reader extends Component {
   componentDidMount() {
     const { location, history } = this.props;
-    const parsed = queryString.parse(location.search).item;
 
-    if (parsed > publications.length && parsed) {
+    if (!location.search) {
       history.replace({
         ...location,
         search: '?item=1',
@@ -48,6 +47,8 @@ export default class Reader extends Component {
 
     return (
       <div>
+         {parsed && (
+        <>   
         <Controls
           currentPage={parsed}
           lengthPublications={publications.length}
@@ -56,6 +57,8 @@ export default class Reader extends Component {
         />
         <Counter currentValue={parsed} totalValue={publications.length} />
         <Publication item={publications[parsed - 1]} />
+        </>
+         )}
       </div>
     );
   }
